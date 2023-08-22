@@ -16,10 +16,10 @@ set(DEP_LIB_DIR ${DEP_INSTALL_DIR}/lib)
 
 # spdlog: fast logger library
 ExternalProject_Add(
-    dep-spdlog
-    GIT_REPOSITORY "https://github.com/gabime/spdlog.git"
-    GIT_TAG "v1.x"
-    GIT_SHALLOW 1
+    dep-spdlog #프로젝트를 빌드할때 사용되는 변수이름->ExternalProject = dep-spdlog
+    GIT_REPOSITORY "https://github.com/gabime/spdlog.git" #사용하려는 깃 주소
+    GIT_TAG "v1.x" #버전설정. 깃홈페이지에서 왼쪽위의 선택하는 태그부분
+    GIT_SHALLOW 1 #숫자는 온/오프의 의미. GIT_SHALLOW의 의미는 커밋되어있는것을 전부 다운하는 것이아닌 최신것 하나만 다운
     UPDATE_COMMAND ""
     PATCH_COMMAND ""
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${DEP_INSTALL_DIR}

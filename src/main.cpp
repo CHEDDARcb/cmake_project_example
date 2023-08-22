@@ -1,7 +1,7 @@
-#include <iostream>
+#include <spdlog/spdlog.h>
 
 int main(void)
 {
-    std::cout << "Hello opengl" << std::endl;
+    SPDLOG_INFO("HELLO WORLD");
     return 0;
 }
